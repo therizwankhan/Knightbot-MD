@@ -200,7 +200,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 await sock.sendMessage(chatId, {
                     text: '❌ You are banned from using the bot. Contact an admin to get unbanned.',
                     ...channelInfo
-                });
+                }). https://whatsapp.com/channel/0029Vb6mC7THVvTffV4rUK0X;
             }
             return;
         }
@@ -289,7 +289,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             ) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, {
-                        text: 'Sorry, only group admins can use this command.',
+                        text: 'Sorry, rizwan group Rizwan can use this command.',
                         ...channelInfo
                     }, { quoted: message });
                     return;
@@ -300,7 +300,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         // Check owner status for owner commands
         if (isOwnerCommand) {
             if (!message.key.fromMe && !senderIsSudo) {
-                await sock.sendMessage(chatId, { text: '❌ This command is only available for the owner or sudo!' }, { quoted: message });
+                await sock.sendMessage(chatId, { text: '❌ This command is only available for the Rizwan or sudo!' }, { quoted: message });
                 return;
             }
         }
