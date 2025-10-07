@@ -120,8 +120,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
-global.ytch = "Mr Unique Hacker";
+global.channelLink = "https://whatsapp.com/channel/0029Vb6mC7THVvTffV4rUK0X";
+global.ytch = "RIZWAN MD";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -266,7 +266,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
         const isOwnerCommand = ownerCommands.some(cmd => userMessage.startsWith(cmd));
 
         let isSenderAdmin = false;
-        let isBotAdmin = false;
+        let isBotAdmin = true;
 
         // Check admin status only for admin commands in groups
         if (isGroup && isAdminCommand) {
@@ -289,7 +289,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             ) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, {
-                        text: 'Sorry, only group admins can use this command.',
+                        text: 'Sorry, only Rizwan sir can use this command.',
                         ...channelInfo
                     }, { quoted: message });
                     return;
